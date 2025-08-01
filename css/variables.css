@@ -1,0 +1,74 @@
+/* ----------------------------------------------------------------------- */
+/*                            Colores */
+/* ----------------------------------------------------------------------- */
+:root {
+  /* 🎯 Fondo oscuro principal, header, footer */
+  --negro-mate-urbano: #1c1c1e; /* Para fondos oscuros principales */
+
+  /* 🪵 Color cálido de acento elegante para tarjetas y botones */
+  --madera-tostada-elegante: #5c4033; /* Tarjetas, botones, banners */
+
+  /* 🌫 Fondo general del sitio */
+  --fondo-niebla-clara: #f6f5f2; /* Fondo base claro y elegante */
+
+  /* 🧾 Títulos y texto principal */
+  --gris-grafito: #2a2a2a; /* Texto principal fuerte */
+
+  /* ✍️ Descripciones y texto secundario */
+  --gris-cálido-suave: #7b7b7b; /* Texto secundario suave */
+
+  /* 🎯 Texto principal, encabezados */
+  --cafe-avellana-oscuro: #3e2e25; /* Títulos, headers */
+
+  /* 🌿 Fondo general claro y suave */
+  --beige-tostado-claro: #efe7de; /* Fondo general del sitio */
+
+  /* 🧾 Subtítulos y texto suave */
+  --gris-cafe-ligero: #6f625a; /* Texto secundario, descripciones */
+
+  /* ✨ Elementos de acento como íconos y hover */
+  --mostaza-suave: #c8a15b; /* Hover, botones secundarios */
+
+  /* 🛒 Botones de llamado a la acción */
+  --terracota-clara: #e2845c; /* CTA: comprar, ver más */
+
+  /* 🖼 Fondo para tarjetas y contenedores */
+  --blanco-roto-suave: #faf9f7; /* Fondo de tarjetas */
+
+  /* 🧩 Bordes y separadores sutiles */
+  --gris-arena: #d1c7bd; /* Bordes, líneas divisorias */
+
+  /* ✅ Mensajes de éxito, stock */
+  --verde-hojalata-claro: #90b296; /* Confirmaciones */
+
+  /* ❌ Mensajes de error y advertencia */
+  --rojo-terracota-apagado: #b04b4b; /* Alertas y errores */
+
+  /* ----------------------------------------------------------------------- */
+  /*                            Fuentes(tamaño) */
+  /* ----------------------------------------------------------------------- */
+
+  /* 🧱 Base general */
+  --fuente-base: 16px; /* Texto principal del sitio */
+  --fuente-secundaria: 15px; /* Alternativa para textos secundarios */
+
+  /* 🔠 Encabezados */
+  --fuente-h1: 40px; /* Título principal (home o secciones destacadas) */
+  --fuente-h2: 32px; /* Subtítulo grande (categorías, banners) */
+  --fuente-h3: 24px; /* Título de tarjetas, bloques de sección */
+  --fuente-h4: 20px; /* Subtítulos o encabezados pequeños */
+
+  /* 🏷️ Textos funcionales */
+  --fuente-descripcion: 15px; /* Descripciones, textos de producto */
+  --fuente-etiqueta: 14px; /* Detalles, precios pequeños, filtros */
+  --fuente-mini: 12px; /* Ayudas, textos legales, footers */
+
+  /* 📦 Componentes UI */
+  --fuente-navbar: 15px; /* Ítems del menú de navegación */
+  --fuente-boton: 16px; /* Texto de botones principales */
+  --fuente-boton-pequeno: 14px; /* Botones secundarios o compactos */
+
+  /* 🧾 Títulos en móvil (opcional si no usas clamp o media queries) */
+  --fuente-h1-movil: 32px;
+  --fuente-h2-movil: 24px;
+}
