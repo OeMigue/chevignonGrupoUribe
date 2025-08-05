@@ -1,0 +1,275 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6f5f2;
+  color: #2a2a2a;
+  margin: 0;
+  padding: 1rem;
+  font-size: 16px;
+}
+
+header {
+  text-align: center;
+  padding: 1rem 0;
+  background: #1c1c1e;
+  color: white;
+}
+
+.checkout-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: #faf9f7;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar .step {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: #7b7b7b;
+  border-bottom: 2px solid #d1c7bd;
+}
+
+.progress-bar .active {
+  color: #5c4033;
+  border-bottom: 2px solid #e2845c;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid #d1c7bd;
+  border-radius: 6px;
+  background-color: white;
+  color: #2a2a2a;
+}
+
+.doc {
+  max-width: 50%;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #c8a15b;
+}
+
+.payment-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.payment-option {
+  flex: 1 1 150px;
+  background-color: #faf9f7;
+  border: 2px solid #d1c7bd;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #2a2a2a;
+}
+
+.payment-option img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.payment-option:hover {
+  border-color: #c8a15b;
+  background-color: #efe7de;
+}
+
+.payment-option.active {
+  border-color: #e2845c;
+  background-color: #f6f5f2;
+  font-weight: bold;
+}
+
+.payment-info {
+  margin-top: 1.5rem;
+  color: #6f625a;
+  font-size: 15px;
+}
+
+.order-summary, .payment-method, .policies, .faq {
+  margin-top: 2rem;
+}
+
+.order-items .item {
+  display: flex;
+  justify-content: space-between;
+  color: #2a2a2a;
+}
+
+.totales {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #3e2e25;
+}
+
+.btn-siguiente {
+  width: 100%;
+  background: #5c4033;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-finalizar {
+  width: 100%;
+  background: #e2845c;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: none;
+}
+
+.btn-finalizar:hover {
+  background: #5c4033;
+}
+
+.btn-finalizar:active {
+  transform: scale(0.97);
+}
+
+.checkout-step[data-step="4"].active ~ .btn-finalizar {
+  display: block;
+}
+
+.faq {
+  margin-top: 2rem;
+  border-top: 1px solid #d1c7bd;
+  padding-top: 1rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #d1c7bd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  color: #3e2e25;
+  padding: 1rem 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+  color: #7b7b7b;
+  transition: transform 0.2s ease;
+}
+
+.faq-question.active::after {
+  content: '−';
+  transform: rotate(180deg);
+  color: #e2845c;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  color: #6f625a;
+  font-size: 14px;
+  padding: 0 0 0.5rem 0;
+}
+
+footer {
+  background-color: #1c1c1e;
+  color: #d1c7bd;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 12px;
+  margin-top: 3rem;
+  border-top: 1px solid #6f625a;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.payment-option.active {
+  outline: 2px solid #e2845c;
+  background-color: #f3f3f3;
+}
+
+.payment-info {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.checkout-step {
+  display: none;
+}
+
+.checkout-step.active {
+  display: block;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+  .checkout-container {
+    padding: 1rem;
+  }
+
+  .progress-bar .step {
+    font-size: 0.8rem;
+  }
+
+  .payment-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .payment-option {
+    flex: 1 1 auto;
+    font-size: 13px;
+  }
+
+  input, select {
+    font-size: 15px;
+  }
+
+  .btn-finalizar {
+    font-size: 0.95rem;
+  }
+}
