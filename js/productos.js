@@ -1,0 +1,359 @@
+let productos = [
+  {
+    id: 1,
+    nombre:
+      "Jean Straight Fit Tiro Medio Boot Cut Azul Medio con Rotos para Hombre",
+    descripcion:
+      "Jean para hombre, Morrison: straight fit, boot cut. Color azul, tono medio.",
+    tipo: "jeans",
+    categoria: "hombre",
+  },
+  {
+    id: 2,
+    nombre:
+      "Jean Súper Slim Fit Tiro Bajo Bota Super Slim Azul Oscuro para Hombre",
+    descripcion:
+      "Jean para hombre, Rider: súper slim fit, bota súper slim. Color azul, tono oscuro.",
+    tipo: "jeans",
+    categoria: "hombre",
+  },
+  {
+    id: 3,
+    nombre: "Denim Masculino 74 Algodón Ecoflex",
+    descripcion:
+      "Género: Masculino Ocasión de uso: Versátil y cómodo para cualquier estilo de vida, ideal tanto para el día a día como para ocasiones casuales.",
+    tipo: "jeans",
+    categoria: "hombre",
+  },
+  {
+    id: 4,
+    nombre:
+      "Chaqueta en Denim Tipo Trucker con Cuello en Cuero Azul Ultra Oscuro para Hombre",
+    descripcion:
+      "Chaqueta para hombre en denim, tipo trucker, straight fit (silueta recta). Color azul, tono ultra oscuro.",
+    tipo: "chaquetas",
+    categoria: "hombre",
+  },
+  {
+    id: 5,
+    nombre: "Chaqueta de Hombre en Cuero",
+    descripcion:
+      "Categoría del producto: Chaquetas. Fit atributo: Clásico. Material de la prenda. Ideal para ocasiones casuales o salidas nocturnas.",
+    tipo: "chaquetas",
+    categoria: "hombre",
+  },
+  {
+    id: 6,
+    nombre: "Chaqueta de Hombre, Acolchada - TOGS",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "chaquetas",
+    categoria: "hombre",
+  },
+  {
+    id: 7,
+    nombre:
+      "Tenis de Hombre en Cuero, Caña Baja Horma Básica Estilizada - Cuero Anilina Liso Diseño Unicolor",
+    descripcion: "Tenis cortos de hombre, estilo casual",
+    tipo: "zapatos",
+    categoria: "hombre",
+  },
+  {
+    id: 8,
+    nombre: "Tenis de Hombre, Estilo Runner - Cuero Gamuzado y Material Textil",
+    descripcion: "Tenis de hombre, estilo runner.",
+    tipo: "zapatos",
+    categoria: "hombre",
+  },
+  {
+    id: 9,
+    nombre: "Tenis Casuales en Cuero para Hombre",
+    descripcion:
+      "Estos tenis en cuero anilina con horma estilizada y diseño tono a tono, ofrecen un look discreto y confortable.",
+    tipo: "zapatos",
+    categoria: "hombre",
+  },
+  {
+    id: 10,
+    nombre:
+      "Camisa Slim Fit Manga Corta en Mezcla de Algodón y Lino para Hombre",
+    descripcion: "Camisa para hombre, slim fit (silueta ajustada).",
+    tipo: "camisas",
+    categoria: "hombre",
+  },
+  {
+    id: 11,
+    nombre: "Camisa de Hombre en Denim, Slim Fit Manga Larga - Azul Claro",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "camisas",
+    categoria: "hombre",
+  },
+  {
+    id: 12,
+    nombre: "Camisa M/C",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "camisas",
+    categoria: "hombre",
+  },
+  {
+    id: 13,
+    nombre: "Pantalón Tipo Chino Regular Fit Boot Cut para Hombre",
+    descripcion:
+      "Pantalón para hombre, tipo chino. Regular fit (silueta recta), boot cut (bota recta)",
+    tipo: "pantalones",
+    categoria: "hombre",
+  },
+  {
+    id: 14,
+    nombre: "Pantalon Khakis Rocket",
+    descripcion:
+      "Pantalón de hombre, tiro medio, bota recta. Bolsillos en diagonal adelante y bolsillos de ribete atrás. ",
+    tipo: "pantalones",
+    categoria: "hombre",
+  },
+  {
+    id: 15,
+    nombre: "Pantalón Tipo Jogger para Hombre",
+    descripcion:
+      "Los jogger pants evolucionan más allá de su origen deportivo y hoy son una opción clave para un estilo urbano cómodo, pero con intención.",
+    tipo: "pantalones",
+    categoria: "hombre",
+  },
+  {
+    id: 16,
+    nombre: "Jean Straight Fit Bota Recta para Mujer",
+    descripcion:
+      "Jean de bota relaxed con detalles en técnica que crea texturas y patrones grabados con herramientas especiales que activa ese relato del rodeo desde lo técnico y artesanal.",
+    tipo: "jeans",
+    categoria: "mujer",
+  },
+  {
+    id: 17,
+    nombre: "Jean Super High Rise Bota Micro Flare Azul Claro para Mujer",
+    descripcion:
+      "Jean para mujer, High Cosmo: super high rise, bota micro flare. Color azul, tono claro.",
+    tipo: "jeans",
+    categoria: "mujer",
+  },
+  {
+    id: 18,
+    nombre: "Jean de Mujer Cosmo Pulse Oscuro",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "jeans",
+    categoria: "mujer",
+  },
+  {
+    id: 19,
+    nombre: "Chaqueta tipo Biker para Mujer",
+    descripcion:
+      "Chaqueta biker en denim con acabados estructurados y silueta que impone sin esfuerzo.",
+    tipo: "chaquetas",
+    categoria: "mujer",
+  },
+  {
+    id: 20,
+    nombre: "Abrigo Trench para mujer",
+    descripcion:
+      "Abrigo trench con silueta A, una forma que se ensancha hacia abajo, en lavado medio y correa metálica con acabado metálico gris oscuro.",
+    tipo: "chaqueta",
+    categoria: "mujer",
+  },
+  {
+    id: 21,
+    nombre: "Chaqueta de Mujer, Acolchada - Ligera",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "chaquetas",
+    categoria: "mujer",
+  },
+  {
+    id: 22,
+    nombre: "Vestido Tipo Blazer para Mujer",
+    descripcion:
+      "Vestido corto, tipo blazer, diseño cruzado con cuello de solapa, escote en V, manga larga",
+    tipo: "vestidos",
+    categoria: "mujer",
+  },
+  {
+    id: 23,
+    nombre: "Vestido Largo con Estampado Maxi Print de Flores para Mujer",
+    descripcion: "Maxi dress, silueta línea A, largo al tobillo.",
+    tipo: "vestidos",
+    categoria: "mujer",
+  },
+  {
+    id: 24,
+    nombre:
+      "Vestido Corto, Escote Profundo en V Manga Sisa con Bolero - Falda con Vuelo",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "vestidos",
+    categoria: "mujer",
+  },
+  {
+    id: 25,
+    nombre: "Camiseta Tipo Chaleco para Mujer",
+    descripcion:
+      "Esta camiseta tipo chaleco con escote en V y detalles de jaladeras, elaborado en mezcla de poliéster, rayón y elastano,",
+    tipo: "camisetas",
+    categoria: "mujer",
+  },
+  {
+    id: 26,
+    nombre: "Camiseta Estampada con Escote Almendrado y Manga Larga para Mujer",
+    descripcion: "Camiseta para mujer, silueta ajustada.",
+    tipo: "camisetas",
+    categoria: "mujer",
+  },
+  {
+    id: 27,
+    nombre: "Camiseta con Detalle de Piedras para Mujer",
+    descripcion:
+      "Esta camiseta semi ajustada en algodón incluye piedras aplicadas al calor que añaden un toque de brillo y originalidad.",
+    tipo: "camisetas",
+    categoria: "mujer",
+  },
+  {
+    id: 28,
+    nombre: "Bota para Mujer",
+    descripcion:
+      "Botas texanas de caña corta (14 cm), hechas en cuero tipo carnaza con forro interno en piel para mayor comodidad.",
+    tipo: "zapatos",
+    categoria: "mujer",
+  },
+  {
+    id: 29,
+    nombre: "Tenis para Mujer",
+    descripcion: "Diseño elegante y moderno con un ajuste cómodo",
+    tipo: "zapatos",
+    categoria: "mujer",
+  },
+  {
+    id: 30,
+    nombre: "Sandalias de Mujer en Cuero Gamuza, Diseño con Correas",
+    descripcion:
+      "Chevignon Tienda Online te ofrece un universo de posibilidades en vestuario, accesorios y complementos para hombre, mujer y niño.",
+    tipo: "zapatos",
+    categoria: "mujer",
+  },
+  {
+    id: 31,
+    nombre: "Camiseta Polo Straight Fit para Niño",
+    descripcion: "Camiseta para niño tipo polo, straight fit (silueta recta).",
+    tipo: "camisetas",
+    categoria: "niño",
+  },
+  {
+    id: 32,
+    nombre: "Camiseta Estampada en Algodón para Niño",
+    descripcion: "Camiseta gráfica para niño, straight fit (silueta recta).",
+    tipo: "camisetas",
+    categoria: "niño",
+  },
+  {
+    id: 33,
+    nombre: "Camisa de Niño en Denim, Straight Fit Manga Larga",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "camisetas",
+    categoria: "niño",
+  },
+  {
+    id: 34,
+    nombre: "Chaqueta Silueta Bomber para Niño",
+    descripcion:
+      "Diseño con patrón acolchado de rombos en el cuerpo y mangas acolchadas lisas.",
+    tipo: "chaquetas",
+    categoria: "niño",
+  },
+  {
+    id: 35,
+    nombre: "Chaqueta Tipo Aviador para Niño",
+    descripcion:
+      "Cuello camisero, cierre frontal de cremallera, puños y fajón en tejido rib para un mejor ajuste, y bolsillos de ribete.",
+    tipo: "chaquetas",
+    categoria: "niño",
+  },
+  {
+    id: 36,
+    nombre: "Chaqueta de Niño, Tipo Bomber - Maxi Print Camuflado",
+    descripcion: "Chaqueta de niño, silueta bomber.",
+    tipo: "chaquetas",
+    categoria: "niño",
+  },
+  {
+    id: 37,
+    nombre: "Pantalón Tipo Jogger para Niño",
+    descripcion:
+      "retina elástica con botón, pasadores y cordón para ajustar, cierre, bolsillos delanteros en diagonal, bolsillos traseros de parche y bota amplia ajustada con elástico.",
+    tipo: "pantalones",
+    categoria: "niño",
+  },
+  {
+    id: 38,
+    nombre: "Pantalón relaxed fit tiro medio",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "pantalones",
+    categoria: "niño",
+  },
+  {
+    id: 39,
+    nombre: "Pantalón Bota Recta",
+    descripcion:
+      "Denim en tejido plano silueta super Slim. Estilo que redefine la comodidad en todo momento.",
+    tipo: "pantalones",
+    categoria: "niño",
+  },
+  {
+    id: 40,
+    nombre: "Buzo Estampado con Capucha para Niño",
+    descripcion:
+      "Cuello con capucha ajustable, puños y fajón en tejido rib, y bolsillo canguro.",
+    tipo: "buzos",
+    categoria: "niño",
+  },
+  {
+    id: 41,
+    nombre: "Buzo Tipo Polo para Niño",
+    descripcion: "Buzo para niño, cerrado con media perilla.",
+    tipo: "buzos",
+    categoria: "niño",
+  },
+  {
+    id: 42,
+    nombre:
+      "Buzo de Niño, Abierto con Capucha - Aplique Repujado + Texto Bordado",
+    descripcion:
+      "Buzo de niño, abierto con capucha. Cuello con capucha forrada ajustable, perilla completa con cierre, puños y fajón en tejido rib, y bolsillo canguro.",
+    tipo: "buzos",
+    categoria: "niño",
+  },
+  {
+    id: 43,
+    nombre: "Pantaloneta de Baño Para Niño, Regular Fit ",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "bermudas",
+    categoria: "niño",
+  },
+  {
+    id: 44,
+    nombre: "Pantaloneta de Baño Para Niño, Regular Fit - Estampado Mini Print",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "bermudas",
+    categoria: "niño",
+  },
+  {
+    id: 45,
+    nombre: "Pantaloneta de Baño Para Niño, Regular Fit - Estampado Peces",
+    descripcion:
+      "Una innovadora línea de denim en todos los fits, lavados y acabados con la mejor tecnología, para los diferentes gustos y ocasiones de uso.",
+    tipo: "bermudas",
+    categoria: "niño",
+  },
+];
