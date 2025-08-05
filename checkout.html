@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Chevignon</title>
+    <link rel="stylesheet" href="/css/Checkout.css" />
+    <script src="/js/checkout.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Chevignon</h1>
+      <nav>
+        <p>Checkout Seguro 🔒</p>
+      </nav>
+    </header>
+
+    <main class="checkout-container">
+      <!-- Barra de progreso -->
+      <div class="progress-bar">
+        <span class="step active">1. Identificación</span>
+        <span class="step">2. Envío</span>
+        <span class="step">3. Pago</span>
+        <span class="step">4. Confirmación</span>
+      </div>
+
+      <!-- Mensaje de compra como invitado -->
+      <section class="guest-checkout">
+        <p>
+          <strong>Compra como invitado</strong> — No necesitas crear cuenta.
+        </p>
+      </section>
+
+      <!-- Paso 1: Datos de Envío -->
+      <section class="checkout-step active" data-step="1">
+        <h2>Identificación</h2>
+        <form id="form-paso1">
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Nombre completo"
+            aria-label="Nombre completo"
+            required
+          />
+          <select class="doc" name="documento" required>
+            <option value="">Selecciona tu documento</option>
+            <option value="cc">Cédula de ciudadanía</option>
+            <option value="ce">Cédula de extranjería</option>
+            <option value="ti">Tarjeta de identidad</option>
+            <option value="pp">Pasaporte</option>
+          </select>
+          <input
+            type="text"
+            name="numero-documento"
+            placeholder="Número de documento"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <input type="tel" name="telefono" placeholder="Teléfono" required />
+          <button type="button" class="btn-siguiente">Siguiente</button>
+        </form>
+      </section>
+
+      <!-- Paso 2: Envío -->
+      <section class="checkout-step" data-step="2">
+        <h2>Detalles del Envío</h2>
+        <section class="order-summary">
+          <form>
+            <select class="doc" name="pais" required>
+              <option value="">Selecciona tu país</option>
+              <option value="co">Colombia</option>
+              <option value="pe">Perú</option>
+              <option value="mx">México</option>
+            </select>
+            <input type="text" name="ciudad" placeholder="Ciudad" required />
+            <input
+              type="text"
+              name="direccion"
+              placeholder="Dirección de entrega"
+              required
+            />
+          </form>
+          <!-- Vista previa del pedido -->
+          <h2>Resumen del Pedido</h2>
+          <div class="order-items">
+            <div class="item">
+              <span>Chaqueta Cuero Negro</span>
+              <span>$499.900</span>
+            </div>
+            <!-- + más items -->
+          </div>
+          <div class="totales">
+            <p>Envío: <strong>$7.200</strong></p>
+            <p>Total: <strong>$499.900</strong></p>
+          </div>
+        </section>
+        <p>Envío estándar hasta 3 días hábiles - $7.200.</p>
+        <button type="button" class="btn-siguiente">Siguiente</button>
+      </section>
+
+      <!-- Paso 3: Método de Pago -->
+      <section class="checkout-step" data-step="3">
+        <section class="payment-method">
+          <h2>Método de pago</h2>
+          <p>Selecciona un método para continuar.</p>
+          <div class="payment-options">
+            <button type="button" class="payment-option" data-method="tarjeta">
+              <img src="/images/logotipos.jpg" alt="Tarjeta" />
+              <span>Tarjeta</span>
+            </button>
+            <button type="button" class="payment-option" data-method="paypal">
+              <img src="/images/logopaypal.png" alt="Paypal" />
+              <span>PayPal</span>
+            </button>
+            <button type="button" class="payment-option" data-method="pse">
+              <img src="/images/logoPse.jpg" alt="Pse" />
+              <span>PSE</span>
+            </button>
+          </div>
+
+          <!-- Contenedor donde se mostrará el contenido según método -->
+          <div class="payment-info-container">
+            <div class="payment-info" id="tarjeta" style="display: none">
+              <h3>Pago con tarjeta</h3>
+              <input type="text" placeholder="Número de tarjeta" required />
+              <input type="text" placeholder="Nombre del titular" required />
+              <input type="text" placeholder="MM/AA" required />
+              <input type="text" placeholder="CVV" required />
+            </div>
+
+            <div class="payment-info" id="paypal" style="display: none">
+              <h3>Conecta tu cuenta PayPal</h3>
+              <input type="email" placeholder="Correo de PayPal" required />
+            </div>
+
+            <div class="payment-info" id="pse" style="display: none">
+              <h3>Pago con PSE</h3>
+              <select required>
+                <option value="">Selecciona tu banco</option>
+                <option>Davivienda</option>
+                <option>Bancolombia</option>
+                <option>Nequi</option>
+                <option>UALÁ</option>
+              </select>
+            </div>
+          </div>
+
+          <p></p>
+
+        </section>
+        <button type="button" class="btn-siguiente">Siguiente</button>
+      </section>
+
+      <!-- Paso 4: Confirmación -->
+      <section class="checkout-step" data-step="4">
+        <h2>Confirmación</h2>
+        <p>¡Gracias por tu compra! Tu pedido está siendo procesado.</p>
+        <p id="estado-envio">📦 En preparación...</p>
+      </section>
+      <!-- Botón de pago -->
+      <button class="btn-finalizar">Finalizar compra</button>
+
+      <!-- Políticas -->
+      <section class="policies">
+        <p>
+          🔁 <strong>Devoluciones fáciles:</strong> hasta 30 días.
+          <a href="#">Ver política</a>
+        </p>
+        <p>🔒 <strong>Pago 100% seguro con SSL</strong></p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-item">
+          <button class="faq-question">¿Cuánto tarda el envío?</button>
+          <div class="faq-answer">
+            <p>
+              El envío tarda entre 2 y 5 días hábiles dependiendo de tu ciudad o
+              región.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Puedo pagar contra entrega?</button>
+          <div class="faq-answer">
+            <p>
+              Sí, puedes pagar en efectivo cuando recibas tu pedido si eliges
+              esa opción en el método de pago.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Qué pasa si el producto no me queda?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Tienes hasta 7 días para solicitar un cambio o devolución. Solo
+              asegúrate de no quitar las etiquetas ni usarlo.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Cómo sé que mi pago fue exitoso?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Recibirás un correo de confirmación y podrás hacer seguimiento
+              desde tu cuenta.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>2025 Chevignon Store. Todos los derechos reservados.</p>
+      <p>Hecho con ❤️ por el equipo de desarrollo.</p>
+    </footer>
+  </body>
+</html>

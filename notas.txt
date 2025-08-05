@@ -94,3 +94,15 @@ Seccion desplegable del lado derecho de la pantalla
 
 ----------------------Mi bolsa(Carrito)----------------------
 
+ 
+      *  Noticas del Alder : V *
+  
+ * Su lema es algo como “what is beautiful stays beautiful”:
+prendas hechas para durar, y con un enfoque cada vez más eco-responsable en diseño y materiales
+
+*Agregar iconos (como tarjetas de crédito o Nequi): puedo recomendarte librerías como FontAwesome.
+
+Darle interactividad: con JavaScript validamos campos o simulamos pago.
+
+Conectar con un carrito de compras: puedes usar localStorage o simular un backend si lo requieren.
+
