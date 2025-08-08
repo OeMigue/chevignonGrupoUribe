@@ -1,49 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chevignon</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <header id="header">
-      <script>
-        fetch("./partials/header.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("header").innerHTML = data;
-          });
-      </script>
+
+  <body class="bg-cover bg-fixed bg-center bg-no-repeat min-h-screen">
+    <!-- Header principal con ID para manipulación DOM -->
+    <header id="main-header" class="w-full">
+      <div id="header-container">
+        <script>
+          fetch("/partials/header.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("header-container").innerHTML = data;
+            });
+        </script>
+      </div>
     </header>
-    <section id="promocion">
-      <script>
-        fetch("./partials/promocion.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("promocion").innerHTML = data;
-          });
-      </script>
+
+    <!-- Contenedor principal -->
+    <main>
+      <!-- Sección Hero - Logo principal y botones de navegación -->
+      <section
+        id="hero-section"
+        class="w-full flex items-center justify-center py-8 sm:py-12 md:py-16 px-4"
+      >
+        <div class="max-w-md mx-auto flex flex-col items-center gap-6 sm:gap-8">
+          <!-- Logo responsive -->
+          <div
+            id="hero-logo"
+            class="w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px]"
+          >
+            <img
+              src="/assets/images/logos/logoPatoChevignon.png"
+              alt="Logo Chevignon"
+              class="w-full h-auto object-contain"
+            />
+          </div>
+
+          <!-- Botones de navegación responsive -->
+          <div
+            id="botones-inicio"
+            class="flex flex-col md:flex-row items-center gap-3 w-full"
+          >
+            <a href="/productos.html" class="w-full sm:w-auto">
+              <button
+                class="bg-[var(--marron-hoja-seca)] rounded h-10 px-4 sm:px-6 py-2 text-center flex items-center justify-center text-[var(--gris-niebla)] shadow hover:shadow-lg transition-shadow text-lg sm:text-lg w-full"
+              >
+                Hombres
+              </button>
+            </a>
+            <a href="/productos.html" class="w-full sm:w-auto">
+              <button
+                class="bg-[var(--marron-hoja-seca)] rounded h-10 px-4 sm:px-6 py-2 text-center flex items-center justify-center text-[var(--gris-niebla)] shadow hover:shadow-lg transition-shadow text-lg sm:text-lg w-full"
+              >
+                Mujeres
+              </button>
+            </a>
+            <a href="/productos.html" class="w-full sm:w-auto">
+              <button
+                class="bg-[var(--marron-hoja-seca)] rounded h-10 px-4 sm:px-6 py-2 text-center flex items-center justify-center text-[var(--gris-niebla)] shadow hover:shadow-lg transition-shadow text-lg sm:text-lg w-full"
+              >
+                Niños
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Promociones -->
+      <section id="promotions-section" class="">
+        <div id="promotions-container">
+          <script>
+            fetch("./partials/promocion.html")
+              .then((response) => response.text())
+              .then((data) => {
+                document.getElementById("promotions-container").innerHTML =
+                  data;
+              });
+          </script>
+        </div>
+      </section>
+
+      <!-- Sección Categorías - Grid responsive -->
+      <section id="categories-section" class="py-8 sm:py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="bebas-neue-regular text-7xl font-bold text-center mb-6 sm:mb-8 text-[var(--beige-corteza-suave)]"
+          >
+            Categorías
+          </h2>
+
+          <!-- Grid responsive de categorías -->
+          <div
+            id="categories-grid"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+          >
+            <!-- Categoría 1 - Chaquetas -->
+            <div id="category-card-1" class="relative group cursor-pointer">
+              <div
+                class="w-full h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden"
+              >
+                <img
+                  src="/assets/images/ropa-hombres/chaquetas/chaqueta1.webp"
+                  alt="Chaquetas"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-10 flex items-start justify-start"
+                >
+                  <h3
+                    class="text-[var(--verde-musgo-apagado)] text-lg sm:text-xl font-bold m-2"
+                  >
+                    Chaquetas
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categoría 2 - Jeans -->
+            <div id="category-card-2" class="relative group cursor-pointer">
+              <div
+                class="w-full h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden"
+              >
+                <img
+                  src="/assets/images/ropa-mujeres/jeans/jean3.webp"
+                  alt="Jeans"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-10 flex items-start justify-start"
+                >
+                  <h3
+                    class="text-[var(--verde-musgo-apagado)] text-lg sm:text-xl font-bold m-2"
+                  >
+                    Jeans
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categoría 3 - Zapatos -->
+            <div id="category-card-3" class="relative group cursor-pointer">
+              <div
+                class="w-full h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden"
+              >
+                <img
+                  src="/assets/images/ropa-hombres/zapatos/zapato2.webp"
+                  alt="Zapatos"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-10 flex items-start justify-start"
+                >
+                  <h3
+                    class="text-[var(--verde-musgo-apagado)] text-lg sm:text-xl font-bold m-2"
+                  >
+                    Zapatos
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categoría 4 - Niños -->
+            <div id="category-card-4" class="relative group cursor-pointer">
+              <div
+                class="w-full h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden"
+              >
+                <img
+                  src="/assets/images/ropa-niños/camisetas/camiseta2.webp"
+                  alt="Niños"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-10 flex items-start justify-start"
+                >
+                  <h3
+                    class="text-[var(--verde-musgo-apagado)] text-lg sm:text-xl font-bold m-2"
+                  >
+                    Niños
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Colecciones -->
+      <section id="collections-section" class="py-8 sm:py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class=" bebas-neue-regular text-7xl font-bold text-center mb-6 sm:mb-8 text-[var(--beige-corteza-suave)]"
+          >
+            Nuestras Colecciones
+          </h2>
+
+          <div
+            id="collections-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          >
+            <!-- Colección 1 -->
+            <div
+              id="collection-card-1"
+              class="bg-[var(--marron-hoja-seca)] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col size-full"
+              
+            >
+              <div class="w-full h-64 sm:h-72 md:h-80 flex-shrink-0">
+                <img
+                  src="/assets/images/promociones/Coleccion1.webp"
+                  alt="Jornal Spring"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 sm:p-6 flex-grow flex flex-col justify-center">
+                <h3
+                  class="text-lg sm:text-xl font-semibold text-[var(--gris-niebla)] mb-2"
+                >
+                  JORNAL SPRING
+                </h3>
+                <p class="text-sm text-[var(--gris-niebla)] leading-relaxed">
+                  Descubre la frescura de la nueva temporada con estilos que
+                  combinan comodidad y tendencia.
+                </p>
+              </div>
+            </div>
+
+            <!-- Colección 2 -->
+            <div
+              id="collection-card-2"
+              class="bg-[var(--marron-hoja-seca)] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              style="height: 100%"
+            >
+              <div class="w-full h-64 sm:h-72 md:h-80 flex-shrink-0">
+                <img
+                  src="/assets/images/promociones/Coleccion2.webp"
+                  alt="Original Trademark"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 sm:p-6 flex-grow flex flex-col justify-center">
+                <h3
+                  class="text-lg sm:text-xl font-semibold text-[var(--gris-niebla)] mb-2"
+                >
+                  ORIGINAL TRADEMARK
+                </h3>
+                <p class="text-sm text-[var(--gris-niebla)] leading-relaxed">
+                  La esencia de Chevignon en piezas icónicas que nunca pasan de
+                  moda.
+                </p>
+              </div>
+            </div>
+
+            <!-- Colección 3 -->
+            <div
+              id="collection-card-3"
+              class="bg-[var(--marron-hoja-seca)] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
+              style="height: 100%"
+            >
+              <div class="w-full h-64 sm:h-72 md:h-80 flex-shrink-0">
+                <img
+                  src="/assets/images/promociones/Coleccion3.jpg"
+                  alt="Legend Label"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-4 sm:p-6 flex-grow flex flex-col justify-center">
+                <h3
+                  class="text-lg sm:text-xl font-semibold text-[var(--gris-niebla)] mb-2"
+                >
+                  LEGEND LABEL
+                </h3>
+                <p class="text-sm text-[var(--gris-niebla)] leading-relaxed">
+                  Piezas exclusivas que marcan la diferencia con detalles únicos
+                  y calidad premium.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Sección Envíos - Cargada dinámicamente -->
+    <section id="shipping-section" class="w-full">
+      <div id="shipping-container">
+        <script>
+          fetch("./partials/envios.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("shipping-container").innerHTML = data;
+            });
+        </script>
+      </div>
     </section>
-    <main></main>
-    <section id="envios">
-      <script>
-        fetch("./partials/envios.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("envios").innerHTML = data;
-          });
-      </script>
-    </section>
-    <footer id="footer">
-      <script>
-        fetch("./partials/footer.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("footer").innerHTML = data;
-          });
-      </script>
+
+    <!-- Footer principal -->
+    <footer id="main-footer" class="w-full">
+      <div id="footer-container">
+        <script>
+          fetch("./partials/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("footer-container").innerHTML = data;
+            });
+        </script>
+      </div>
     </footer>
+    <script type="module" src="/js/script.js"></script>
   </body>
 </html>
