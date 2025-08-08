@@ -1,683 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/alexisprueba.css">
-    <title>Productos </title>
-    <link rel="icon" type="" href="/images/camisa-polo.png">
-</head>
-<body class="bg-[var(--fondo-niebla-clara)] text-[var(--gris-grafito)]">
-<header class="sticky top-0 z-50 bg-[var(--negro-mate-urbano)] text-white border-b border-[var(--gris-arena)] shadow transition duration-300 ease-in-out">
-    <nav id="menu">
-        <div class="mx-auto flex items-center justify-between py-4 px-6 flex-wrap">
-            <!-- logo -->
-            <a href="/index.html" class="text-2xl font-extrabold tracking-wide text-white bg-[var(--beige-tostado-claro)] rounded-lg p-2"> <!-- Si el logo no nos gusta asi usar= bg-[var(--beige-tostado-claro)] rounded-lg p-2 o invert-->
-                <img src="/images/Chevignon-logo.jpg" alt="Logo" class="h-16 w-auto transition-transform hover:scale-105" />
-            </a>
-            <!-- menu header -->
-            <ul class="menu flex space-x-6 text-sm font-medium">
-                <li>
-                    <a href="" class="text-[var(--mostaza-suave)] hover:text-white transition-colors">
-                        Hombres
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="text-[var(--mostaza-suave)] hover:text-white transition-colors">
-                        Mujeres
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="text-[var(--mostaza-suave)] hover:text-white transition-colors">
-                        Niños
-                    </a>
-                </li>
-            </ul>
-            <!-- iconos header-->
-            <div class="flex items-center space-x-4 w-full md:w-auto mt-4 md:mt-0 justify-end">
-                <!-- buscador -->
-                <div class="relative hidden md:block">
-                    <input type="search" placeholder="Buscar..."
-                        class="border border-[var(--gris-arena)] bg-[var(--blanco-roto-suave)] rounded pl-10 pr-3 py-1 text-sm text-[var(--gris-grafito)] focus:outline-none focus:ring-2 focus:ring-[var(--mostaza-suave)] transition" />
-                    <div class="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
-                        <svg class="w-5 h-5 text-[var(--gris-cálido-suave)]" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 7.5 7.5a7.5 7.5 0 0 0 9.15 9.15z" />
-                        </svg>
-                    </div>
-                </div>
-                <!-- bandera -->
-                <img width="32" height="32" src="https://img.icons8.com/color/48/colombia-circular.png" alt="colombia-circular" />
-                <!-- usuario -->
-                <button class="text-white hover:text-[var(--mostaza-suave)] transition">
-                    <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                        </svg>
-                    </a>
-                </button>
-                <!-- carrito -->
-                <button class="text-white hover:text-[var(--mostaza-suave)] transition">
-                    <a href="/cart.html" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                        </svg>
-                    </a>
-                </button>
-            </div>
-        </div>
-    </nav>
-</header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="" href="/images/camisa-polo.png" />
+  </head>
+  <body class="bg-cover bg-fixed bg-center bg-no-repeat min-h-screen">
+    <header
+      id="header-principal" class="w-full"
+    >
+      <script>
+        fetch("/partials/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-principal").innerHTML = data;
+          });
+      </script>
+    </header>
     <!-- imgs promociones -->
-    <section class="overflow-hidden bg-white py-4">
-        <div class="scroll-container">
-            <div class="scroll-track flex items-center gap-8">
-                <img src="/images/promo1.webp" class="h-40 inline-block" alt="promo" />
-                <img src="/images/promo2.jpg" class="h-40 inline-block" alt="promo" />
-                <img src="/images/promo3.jpg" class="h-40 inline-block" alt="promo" />
-                <!-- <img src="/images/promo4.webp" class="h-40 inline-block" alt="promo" /> -->
-                <img src="/images/promo1.webp" class="h-40 inline-block" alt="promo" />
-                <img src="/images/promo2.jpg" class="h-40 inline-block" alt="promo" />
-                <img src="/images/promo3.jpg" class="h-40 inline-block" alt="promo" />
-            </div>
-        </div>
+    <section id="promociones">
+      <script>
+        fetch("/partials/promocion.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("promociones").innerHTML = data;
+          });
+      </script>
     </section>
     <!-- contenedor general -->
-<div class="container mx-auto px-4 py-6 flex flex-col md:flex-row gap-6">
-    <!-- sección filtros -->
-<section class="w-full md:w-2/4 space-y-6">
-    <aside class="w-full md:w-1/4 space-y-6">
-        <!-- categoría -->
-        <details class="bg-gray-100 p-2 rounded">
+    <main class="container mx-auto  py-6 flex flex-col lg:flex-row gap-6">
+      <!-- sección filtros -->
+      <section class="max-w-full mx-5 lg:w-[20%] xl:w-[15%] justify-items-center mt-5">
+        <aside class="w-[90%] md:w-full  text-[var(--gris-niebla)] bg-[var(--marron-hoja)] grid grid-cols-2 md:grid-cols-5 lg:grid-cols-1 grid-rows-2 gap-2 ">
+          <!-- categoría -->
+          <details class=" bg-[var(--marron-hoja-seca)] p-2 rounded">
+            <summary class="cursor-pointer font-semibold">Categoría</summary>
+            <ul class="pl-4 mt-2 space-y-1 text-sm ">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Camisas
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Polos
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Chaquetas
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Jeans Hombre
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Camisetas
+                </label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Accesorios</label>
+              </li>
+            </ul>
+          </details>
+          <!-- talla -->
+          <details class="bg-[var(--marron-hoja-seca)] p-2 rounded">
+            <summary class="cursor-pointer font-semibold">Talla</summary>
+            <ul class="pl-4 mt-2 space-y-1 text-sm">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  S
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  M
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  L
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  XL
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  XXL
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Unica
+                </label>
+              </li>
+            </ul>
+          </details>
+          <!-- subcategoría -->
+          <details class="bg-[var(--marron-hoja-seca)] p-2 rounded">
             <summary class="cursor-pointer font-semibold">
-                Categoría
+              Sub-categoría
             </summary>
             <ul class="pl-4 mt-2 space-y-1 text-sm">
-                <li>
-                    <label>
-                        <input type="checkbox"> 
-                            Camisas
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox"> 
-                            Polos
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox"> 
-                        Chaquetas
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox">
-                            Jeans Hombre
-                        </label>
-                </li>
-                <li>
-                    <label>
-                        <input type="checkbox"> 
-                            Camisetas
-                    </label>
-                </li>
-                <li><label><input type="checkbox"> Accesorios</label></li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Gorras
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Correas
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Billeteras
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Medias
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Super Slim Fit
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Underwear
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Maletines y Morrales
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Lociones
+                </label>
+              </li>
             </ul>
-        </details>
-        <!-- talla -->
-        <details class="bg-gray-100 p-2 rounded">
+          </details>
+          <!-- características -->
+          <details class="bg-[var(--marron-hoja-seca)] p-2 rounded">
             <summary class="cursor-pointer font-semibold">
-                Talla
+              Características
             </summary>
-                <ul class="pl-4 mt-2 space-y-1 text-sm">
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                S
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                M
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                L
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                XL
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                XXL
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Unica
-                        </label>
-                    </li>
-                </ul>
-        </details>
-        <!-- subcategoría -->
-        <details class="bg-gray-100 p-2 rounded">
-            <summary class="cursor-pointer font-semibold">
-                Sub-categoría
-            </summary>
-                <ul class="pl-4 mt-2 space-y-1 text-sm">
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Gorras
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Correas
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Billeteras
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Medias
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Super Slim Fit
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                            Underwear
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Maletines y Morrales
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                            Lociones
-                        </label>
-                    </li>
-                </ul>
-        </details>
-        <!-- características -->
-        <details class="bg-gray-100 p-2 rounded">
-            <summary class="cursor-pointer font-semibold">
-                Características
-            </summary>
-                <ul class="pl-4 mt-2 space-y-1 text-sm">
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Runner
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Smart
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Bomber
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Basket
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Premium Denim
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Cuero
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Estampado
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox">
-                                Fondo entero
-                        </label>
-                    </li>
-                </ul>
-        </details>
-        <!-- fit -->
-        <details class="bg-gray-100 p-2 rounded">
-            <summary class="cursor-pointer font-semibold">
-                Fit
-            </summary>
-                <ul class="pl-4 mt-2 space-y-1 text-sm">
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Jogger
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Straight fit
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Super Slim fit
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Relaxed fit
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Slim fit
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox">
-                                Slim
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Classic
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Regular
-                        </label>
-                    </li>
-                </ul>
-        </details>
-        <!-- color -->
-        <details class="bg-gray-100 p-2 rounded">
-            <summary class="cursor-pointer font-semibold">
-                Color
-            </summary>
-                <ul class="pl-4 mt-2 space-y-1 text-sm">
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Varios
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Amarillo
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Blanco
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Negro
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Azul
-                        </label></li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Naranja
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Verde
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Rosa
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Morado
-                        </label>
-                    </li>
-                </ul>
-        </details>
-        <!-- cuello -->
-        <details class="bg-gray-100 p-2 rounded">
-            <summary class="cursor-pointer font-semibold">
-                Cuello
-            </summary>
-                <ul class="pl-4 mt-2 space-y-1 text-sm">
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Redondo
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Polo
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Neru
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Camisero Tejido
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Tejido
-                        </label>
-                    </li>
-                </ul>
-        </details>
-        <!-- lavado -->
-        <details class="bg-gray-100 p-2 rounded">
-            <summary class="cursor-pointer font-semibold">
-                Lavado
-            </summary>
-                <ul class="pl-4 mt-2 space-y-1 text-sm">
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Azul Oscuro
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Azul Medio
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Azul Claro
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Gris
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Negro
-                        </label>
-                    </li>
-                </ul>
-        </details>
-        <!-- manga -->
-        <details class="bg-gray-100 p-2 rounded">
-            <summary class="cursor-pointer font-semibold">
-                Manga
-            </summary>
-                <ul class="pl-4 mt-2 space-y-1 text-sm">
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Larga
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Manga Larga
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Manga Corta
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Corta
-                        </label>
-                    </li>
-                </ul>
-        </details>
-        <!-- stretch -->
-        <details class="bg-gray-100 p-2 rounded">
-            <summary class="cursor-pointer font-semibold">
-                Stretch
-            </summary>
-                <ul class="pl-4 mt-2 space-y-1 text-sm">
-                    <li>
-                        <label>
-                            <input type="checkbox">
-                                Stretch
-                            </label>
-                        </li>
-                    <li>
-                        <label>
-                            <input type="checkbox"> 
-                                Comfort
-                        </label>
-                    </li>
-                </ul>
-        </details>
-    </aside>
-</section>
-<!-- sección productos -->
-<section class="w-full md:w-3/4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="border p-4">
-            <img src="" alt="producto">
-        </div>
-        <div class="border p-4">
-            <img src="" alt="producto">
-        </div>
-        <div class="border p-4">
-            <img src="" alt="producto">
-        </div>
-        
-    </div>
-</section>
-</div>
-<!-- mostrar más -->
-<section class="p-4 text-center">
-    <button class="btn-mostrar-mas border px-4 py-2 mt-2">Mostrar más</button>
-</section>
-<!-- items arriba footer -->
-<section class="py-10 bg-[var(--blanco-roto-suave)] text-center text-[var(--gris-grafito)]">
-    <div class="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
-        <!-- item 1 -->
-        <div class="flex flex-col items-center space-y-2">
-            <img width="64" height="64" src="https://img.icons8.com/external-victoruler-solid-victoruler/64/external-return-box-logistics-victoruler-solid-victoruler.png" alt="cambios y devoluciones" />
-            <h3 class="font-semibold text-[var(--madera-tostada-elegante)] text-base">Cambios y devoluciones GRATIS</h3>
-            <p class="text-sm text-[var(--gris-cálido-suave)] max-w-xs">
-                Gestiona tus pedidos a través de la web o en nuestras tiendas físicas.
-            </p>
-        </div>
-        <!-- item 2 -->
-        <div class="flex flex-col items-center space-y-2">
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/delivery--v2.png" alt="envios express" />
-            <h3 class="font-semibold text-[var(--madera-tostada-elegante)] text-base">Envíos Express</h3>
-            <p class="text-sm text-[var(--gris-cálido-suave)] max-w-xs">
-                Para Medellín y el Área Metropolitana antes de las 4pm
-            </p>
-        </div>
-        <!-- item 3 -->
-        <div class="flex flex-col items-center space-y-2">
-            <img width="50" height="50" src="https://img.icons8.com/material-rounded/24/coin-in-hand.png" alt="medios de pago" />
-            <h3 class="font-semibold text-[var(--madera-tostada-elegante)] text-base">Múltiples Medios de Pago</h3>
-            <p class="text-sm text-[var(--gris-cálido-suave)] max-w-xs">
-                Métodos de pago que se ajustan a tus necesidades
-            </p>
-        </div>
-        <!-- item 4 -->
-        <div class="flex flex-col items-center space-y-2">
-            <img width="50" height="50" src="https://img.icons8.com/ios-glyphs/30/total-sales-1.png" alt="financiacion" />
-            <h3 class="font-semibold text-[var(--madera-tostada-elegante)] text-base">Opciones de financiación</h3>
-            <p class="text-sm text-[var(--gris-cálido-suave)] max-w-xs">
-            Ahora el crédito Chevignon es Su•Pay
-            </p>
-        </div>
-    </div>
-</section>
-<footer class="p-4 border-t border-[var(--gris-arena)] mt-4 bg-[var(--blanco-roto-suave)] text-[var(--gris-grafito)] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 container mx-auto">
-    <!-- sobre nosotros -->
-    <div>
-        <h3 class="font-semibold text-lg text-[var(--cafe-avellana-oscuro)] mb-2">Sobre nosotros</h3>
-        <ul class="space-y-1 text-[var(--gris-grafito)] text-sm">
-            <li>
-                <a href="https://www.chevignon.com.co/localizar-tiendas" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Encuentra tu tienda</a>
-            </li>
-            <li>
-                <a href="https://www.chevignon.com.co/nuestra-marca" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Historia de la marca</a>
-            </li>
-            <li>
-                <a href="https://www.chevignon.com.co/sitemap" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Mapa del sitio</a>
-            </li>
-            <li>
-                <a href="" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Próximos eventos</a>
-            </li>
-            <li>
-                <a href="https://www.chevignon.com.co/cyber-days" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">CyberDays</a>
-            </li>
-            <li>
-                <a href="https://www.chevignon.com.co/sale" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">SALE</a>
-            </li>
-            <li>
-                <a href="https://www.chevignon.com.co/CM2025-registro" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Charms Bar</a>
-            </li>
-        </ul>
-    </div>
-    <!-- terminos y condiciones -->
-    <div>
-        <h3 class="font-semibold text-lg text-[var(--cafe-avellana-oscuro)] mb-2">Información</h3>
-        <ul class="space-y-1 text-[var(--gris-grafito)] text-sm">
-            <li>
-                <a href="https://www.chevignon.com.co/terminos-condiciones" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Términos y condiciones</a></li>
-            <li>
-                <a href="https://www.chevignon.com.co/info/promociones" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Términos y condiciones de promociones</a>
-            </li>
-            <li>
-                <a href="https://www.chevignon.com.co/info/politica-de-cookies" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Política de Cookies</a>
-            </li>
-            <li>
-                <a href="https://www.chevignon.com.co/info/cambios-devoluciones" class="hover:text-[var(--mostaza-suave)] transition-colors">Política de Cambios y Devoluciones</a>
-            </li>
-            <li>
-                <a href="https://www.magneto365.com/co/empresas/chevignon" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Trabaja con nosotros</a>
-            </li>
-            <li>
-                <a href="https://www.chevignon.com.co/distribuidores" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">¿Quieres ser distribuidor Chevignon?</a>
-            </li>
-            <li>
-                <a href="https://www.chevignon.com.co/sobre-sitio/tratamiento-datos" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Tratamiento de datos personales</a>
-            </li>
-        </ul>
-    </div>
-    <!-- cambio y devoluciones -->
-    <div>
-        <h3 class="font-semibold text-lg text-[var(--cafe-avellana-oscuro)] mb-2">Cambios y devoluciones</h3>
-        <ul class="space-y-1 text-[var(--gris-grafito)] text-sm">
-            <li><a href="https://www.chevignon.com.co/login?returnUrl=%2Faccount%23%2Fcambios-devoluciones" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">
-                Gestiona tu cambio o devolución</a></li>
-            <li><a href="https://www.chevignon.com.co/ayuda-pqr" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">PQR y Otras solicitudes</a></li>
-            <li><a href="https://www.chevignon.com.co/estado-pqrs" target="_blank" class="hover:text-[var(--mostaza-suave)] transition-colors">Estado de mi PQR</a></li>
-        </ul>
-    </div>
-    <!-- servicio cliente -->
-    <div>
-        <h3 class="font-semibold text-lg text-[var(--cafe-avellana-oscuro)] mb-2">Servicio al cliente</h3>
-        <ul class="space-y-2 text-sm">
-            <li>
-                <a href="https://api.whatsapp.com/send?phone=573225196168&text=Hola%20Chevignon,%20tengo%20una%20consulta" target="_blank" class="flex items-center gap-2 hover:text-[var(--mostaza-suave)] transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
-                        <path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"/>
-                        <path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"/>
-                    </svg>
-                    Whatsapp
-                </a>
-            </li>
-            <li>
-                <a href="" class="flex items-center gap-2 hover:text-[var(--mostaza-suave)] transition-colors">
-                    <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/phone-disconnected.png" alt="phone-disconnected"/>
-                    Línea nacional: 01 8000 189002
-                </a>
-            </li>
-        </ul>
-    </div>
-</footer>
-
-</body>
+            <ul class="pl-4 mt-2 space-y-1 text-sm">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Runner
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Smart
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Bomber
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Basket
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Premium Denim
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Cuero
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Estampado
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Fondo entero
+                </label>
+              </li>
+            </ul>
+          </details>
+          <!-- fit -->
+          <details class="bg-[var(--marron-hoja-seca)] p-2 rounded">
+            <summary class="cursor-pointer font-semibold">Fit</summary>
+            <ul class="pl-4 mt-2 space-y-1 text-sm">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Jogger
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Straight fit
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Super Slim fit
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Relaxed fit
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Slim fit
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Slim
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Classic
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Regular
+                </label>
+              </li>
+            </ul>
+          </details>
+          <!-- color -->
+          <details class="bg-[var(--marron-hoja-seca)] p-2 rounded">
+            <summary class="cursor-pointer font-semibold">Color</summary>
+            <ul class="pl-4 mt-2 space-y-1 text-sm">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Varios
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Amarillo
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Blanco
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Negro
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Azul
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Naranja
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Verde
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Rosa
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Morado
+                </label>
+              </li>
+            </ul>
+          </details>
+          <!-- cuello -->
+          <details class="bg-[var(--marron-hoja-seca)] p-2 rounded">
+            <summary class="cursor-pointer font-semibold">Cuello</summary>
+            <ul class="pl-4 mt-2 space-y-1 text-sm">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Redondo
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Polo
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Neru
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Camisero Tejido
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Tejido
+                </label>
+              </li>
+            </ul>
+          </details>
+          <!-- lavado -->
+          <details class="bg-[var(--marron-hoja-seca)] p-2 rounded">
+            <summary class="cursor-pointer font-semibold">Lavado</summary>
+            <ul class="pl-4 mt-2 space-y-1 text-sm">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Azul Oscuro
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Azul Medio
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Azul Claro
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Gris
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Negro
+                </label>
+              </li>
+            </ul>
+          </details>
+          <!-- manga -->
+          <details class="bg-[var(--marron-hoja-seca)] p-2 rounded">
+            <summary class="cursor-pointer font-semibold">Manga</summary>
+            <ul class="pl-4 mt-2 space-y-1 text-sm">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Larga
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Manga Larga
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Manga Corta
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Corta
+                </label>
+              </li>
+            </ul>
+          </details>
+          <!-- stretch -->
+          <details class="bg-[var(--marron-hoja-seca)] p-2 rounded">
+            <summary class="cursor-pointer font-semibold">Stretch</summary>
+            <ul class="pl-4 mt-2 space-y-1 text-sm">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Stretch
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  Comfort
+                </label>
+              </li>
+            </ul>
+          </details>
+        </aside>
+      </section>
+      <!-- sección productos -->
+      <section class="w-full ">
+        <div
+          id="catalogo"
+          class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-center gap-4 pt-0 contenedor-productos"
+        ></div>
+      </section>
+    </main>
+    <!-- items arriba footer -->
+    <section id="envios">
+      <script>
+        fetch("/partials/envios.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("envios").innerHTML = data;
+          });
+      </script>
+    </section>
+    <footer id="footer">
+      <script>
+        fetch("/partials/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer").innerHTML = data;
+          });
+      </script>
+    </footer>
+    
+    <script src="/js/script.js" type="module"></script>
+  </body>
 </html>

@@ -4,8 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout - Chevignon</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/Checkout.css" />
-    <script src="/js/checkout.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    
   </head>
   <body>
     <header>
@@ -110,15 +118,15 @@
           <p>Selecciona un método para continuar.</p>
           <div class="payment-options">
             <button type="button" class="payment-option" data-method="tarjeta">
-              <img src="/images/logotipos.jpg" alt="Tarjeta" />
+              <img src="./assets/images/logos/logoTarjetas.jpg" alt="Tarjeta" />
               <span>Tarjeta</span>
             </button>
             <button type="button" class="payment-option" data-method="paypal">
-              <img src="/images/logopaypal.png" alt="Paypal" />
+              <img src="./assets/images/logos/logopaypal.png" alt="Paypal" />
               <span>PayPal</span>
             </button>
             <button type="button" class="payment-option" data-method="pse">
-              <img src="/images/logoPse.jpg" alt="Pse" />
+              <img src="./assets/images/logos/logoPse.jpg" alt="Pse" />
               <span>PSE</span>
             </button>
           </div>
@@ -226,5 +234,6 @@
       <p>2025 Chevignon Store. Todos los derechos reservados.</p>
       <p>Hecho con ❤️ por el equipo de desarrollo.</p>
     </footer>
+    <script src="/js/checkout.js" defer></script>
   </body>
 </html>

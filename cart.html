@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Carrito|Chevignon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
     <!-- PANEL LATERAL DE BOLSA -->
-<div class="fixed top-0 right-0 w-full max-w-md h-full bg-white z-50 shadow-lg flex flex-col">
+<section class="fixed top-0 right-0 w-full max-w-md h-full bg-white z-50 shadow-lg flex flex-col">
 
   <!-- Encabezado -->
   <div class="flex justify-between items-center p-4 border-b">
     <div class="flex items-center gap-2 font-medium text-base">
       <span class="text-xl"><img src="https://chevignon.vtexassets.com/assets/vtex.file-manager-graphql/images/4ed64a5a-7b89-40af-b31c-d85a1fa51334___7d5edaf384c76655da436c7883e31b32.svg" class="w-12 h-12"></span> Mi bolsa
     </div>
-    <button class="text-xl">✖️</button>
+    <button class="text-xl" id="cerrarCarrito">✖️</button>
   </div>
 
   <!-- Contenido del producto -->
@@ -78,8 +85,7 @@
     </button>
     </a>
   </div>
-</div>
+</section>
+<script type="module" src="/js/script.js"></script>
 </body>
-
->>>>>>> 2b09774e7a70f1050759ad38fb9cba87ec17255e
 </html>
