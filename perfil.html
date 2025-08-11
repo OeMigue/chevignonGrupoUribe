@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Perfil | Chevignon</title>
 
-  <!-- Fuente similar (opcional) -->
+   <!-- Fuente similar a la que usan en Chevignon -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/perfil.css">
@@ -13,13 +13,15 @@
 <body>
   <div class="page">
 
-    <!-- SIDEBAR -->
+     <!-- ======== MENÚ LATERAL / SIDEBAR ======== -->
     <aside class="sidebar" aria-label="Menú de usuario">
+       <!-- Parte superior del menú: avatar y saludo -->
       <div class="profile-top">
         <div class="avatar" aria-hidden="true"></div>
         <div class="hello">Hola!</div>
       </div>
 
+       <!-- Menú con las diferentes secciones del perfil -->
       <nav class="menu" aria-label="Secciones">
         <a class="menu-item active" href="#"><span class="bar"></span>
           <svg class="ico" viewBox="0 0 24 24" aria-hidden><path d="M3 3h18v18H3z" fill="none"/></svg>
@@ -65,12 +67,12 @@
       <a class="logout" href="#">Salir</a>
     </aside>
 
-    <!-- MAIN -->
+     <!-- ======== CONTENIDO PRINCIPAL ======== -->
     <main class="main">
       <h1 class="page-title">Perfil</h1>
 
       <div class="content-row">
-        <!-- Left / center profile card -->
+        <!-- Tarjeta central con la info personal -->
         <section class="profile-card" aria-labelledby="perfilTitle">
           <h2 id="perfilTitle" class="sr-only">Información personal</h2>
 
@@ -122,11 +124,12 @@
           </div>
         </section>
 
-        <!-- Right bulletin -->
+        <!-- Panel lateral derecho: boletín informativo -->
         <aside class="side-panel">
           <h3 class="side-title">BOLETÍN INFORMATIVO</h3>
           <p class="side-sub">¿Quiere recibir boletines informativos promocionales?</p>
 
+          <!-- Checkbox para suscribirse al boletín -->
           <label class="checkbox-cta">
             <input type="checkbox" checked aria-checked="true" />
             <span class="box"></span>
