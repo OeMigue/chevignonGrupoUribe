@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Perfil | Chevignon</title>
+
+   <!-- Fuente similar a la que usan en Chevignon -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+  <div class="page">
+
+     <!-- ======== MENÚ LATERAL / SIDEBAR ======== -->
+    <aside class="sidebar" aria-label="Menú de usuario">
+       <!-- Parte superior del menú: avatar y saludo -->
+      <div class="profile-top">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="hello">Hola!</div>
+      </div>
+
+       <!-- Menú con las diferentes secciones del perfil -->
+      <nav class="menu" aria-label="Secciones">
+        <a class="menu-item active" href="#"><span class="bar"></span>
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden><path d="M3 3h18v18H3z" fill="none"/></svg>
+          <span>Perfil</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden><path d="M3 3h18v18H3z" fill="none"/></svg>
+          <span>Direcciones</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden><path d="M3 3h18v18H3z" fill="none"/></svg>
+          <span>Pedidos</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden><path d="M3 3h18v18H3z" fill="none"/></svg>
+          <span>Tarjetas de crédito</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden><path d="M3 3h18v18H3z" fill="none"/></svg>
+          <span>Autenticación</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden><path d="M3 3h18v18H3z" fill="none"/></svg>
+          <span>Cambios y devoluciones</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden><path d="M3 3h18v18H3z" fill="none"/></svg>
+          <span>Mis vales</span>
+        </a>
+
+        <a class="menu-item" href="#">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden><path d="M3 3h18v18H3z" fill="none"/></svg>
+          <span>Mis favoritos</span>
+        </a>
+      </nav>
+
+      <a class="logout" href="#">Salir</a>
+    </aside>
+
+     <!-- ======== CONTENIDO PRINCIPAL ======== -->
+    <main class="main">
+      <h1 class="page-title">Perfil</h1>
+
+      <div class="content-row">
+        <!-- Tarjeta central con la info personal -->
+        <section class="profile-card" aria-labelledby="perfilTitle">
+          <h2 id="perfilTitle" class="sr-only">Información personal</h2>
+
+          <div class="grid-two">
+            <div class="field">
+              <label class="label">Nombre</label>
+              <div class="value">&nbsp;</div>
+            </div>
+
+            <div class="field">
+              <label class="label">Apellido</label>
+              <div class="value">&nbsp;</div>
+            </div>
+
+            <div class="field full">
+              <label class="label">Email</label>
+              <div class="value small">miguelcardonahenao23022008@gmail.com</div>
+            </div>
+
+            <div class="field">
+              <label class="label">Identificación</label>
+              <div class="value">&nbsp;</div>
+            </div>
+
+            <div class="field">
+              <label class="label">Género</label>
+              <div class="value">&nbsp;</div>
+            </div>
+
+            <div class="field">
+              <label class="label">Fecha de nacimiento</label>
+              <div class="value">&nbsp;</div>
+            </div>
+
+            <div class="field">
+              <label class="label">Teléfono</label>
+              <div class="value">&nbsp;</div>
+            </div>
+
+            <div class="field full">
+              <label class="label">Segmento</label>
+              <div class="value small">SIN SEGMENTO</div>
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <button class="btn-edit">✎ EDITAR</button>
+            <p class="note">El territorio indicado, está asignado de acuerdo al correo electrónico inscrito en la base de datos del plan de Lealtad ...</p>
+          </div>
+        </section>
+
+        <!-- Panel lateral derecho: boletín informativo -->
+        <aside class="side-panel">
+          <h3 class="side-title">BOLETÍN INFORMATIVO</h3>
+          <p class="side-sub">¿Quiere recibir boletines informativos promocionales?</p>
+
+          <!-- Checkbox para suscribirse al boletín -->
+          <label class="checkbox-cta">
+            <input type="checkbox" checked aria-checked="true" />
+            <span class="box"></span>
+            <span class="cta-text">Quiero recibir el boletín informativo con promociones.</span>
+          </label>
+        </aside>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>
