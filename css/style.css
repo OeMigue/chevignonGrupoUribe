@@ -78,8 +78,9 @@ p, span, a {
 }
 
 
+
 body {
-  background-image: url("/assets/images/fondoBody.jpg");
+  /* background-image: url("/assets/images/fondoBody.jpg"); */
 }
 /* Efecto header texto */
 .menu:hover li {
@@ -91,6 +92,15 @@ body {
     color: var(--gris-arena);
 }
 
+
+.main-section {
+  background-image: url("/assets/images/fondoBody.jpg");
+  background-size: cover;
+}
+
+.main-section h2 {
+  color: var();
+}
 
 /* carousel */
 @keyframes scroll {
@@ -135,7 +145,7 @@ body {
   width: 300px;
   background-color: var(--verde-musgo-apagado);
   border: 2px solid var(--verde-bosque-oscuro);
-  padding: 20px;
+  padding: 0;
   border-radius: 10px;
   box-shadow: 0 2px 5px var(--verde-bosque-oscuro);
   color: var(--beige-corteza-suave);
@@ -165,7 +175,7 @@ body {
 }
 
 .card-producto button {
-  margin: 10px 5px 5px;
+  
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -202,15 +212,11 @@ body {
 }
 .carrito-panel.visible {
   transform: translateX(0%);
+  transition: transform 0.3s ease;
 }
 
-.oculto {
-  display: none;
-}
 
 * {
   box-sizing: border-box;
 
 }
-
-
