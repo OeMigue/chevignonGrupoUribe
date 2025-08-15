@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awesome CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/login-registro.css">
+    <link rel="stylesheet" href="/css/prueba.css">
     <title>Login | Registro</title>
 </head>
-<body>
+<body class="body-login">
     
-    <div class="container" id="container">
+    <div class="container-login" id="container-login">
         <div class="form-container sign-up">
             <form>
                 <h1>Crear Cuenta</h1>
@@ -61,7 +67,7 @@
                 <input type="password" 
                 placeholder="Contraseña">
                 <a href="">¿Olvidaste tu contraseña?</a>
-                <button>Inicar sesion</button>
+                <button><a href="/perfil.html" class="w-full h-full boton-link-login">Inicar sesion</a></button>
             </form>
         </div>
         <div class="toggle-container">
@@ -69,12 +75,12 @@
                 <div class="toggle-panel toggle-left">
                     <h1>Bienvenido De nuevo!</h1>
                     <p>Ingrese sus datos personales para utilizar todas las funciones del sitio.</p>
-                    <button class="hidden" id="login">Iniciar sesion</button>
+                    <button id="login">Iniciar sesion</button>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Hola, Amigo!</h1>
                     <p>Registrate con tus datos personales para utilizar todas las funciones del sitio.</p>
-                    <button class="hidden" id="register">Registrarse</button>
+                    <button  id="register">Registrarse</button>
                 </div>
             </div>
         </div>

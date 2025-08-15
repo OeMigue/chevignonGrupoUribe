@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout - Chevignon</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/Checkout.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/prueba.css" />
     <link
       rel="icon"
       type=""
@@ -20,11 +19,10 @@
     />
   </head>
   <body>
-    <header>
-      <h1>Chevignon</h1>
-      <nav>
-        <p>Checkout Seguro 🔒</p>
-      </nav>
+    <header class="header-checkout">
+      <a href="/index.html">
+        <img src="/assets/images/logos/logoBlancoChevignonClasicoSinFondo.png" alt="">
+      </a>
     </header>
 
     <main class="checkout-container">
@@ -37,7 +35,7 @@
       </div>
 
       <!-- Mensaje de compra como invitado -->
-      <section class="guest-checkout">
+      <section class="guest-checkout mb-3">
         <p>
           <strong>Compra como invitado</strong> — No necesitas crear cuenta.
         </p>
@@ -74,7 +72,7 @@
             required
           />
           <input type="tel" name="telefono" placeholder="Teléfono" required />
-          <button type="button" class="btn-siguiente">Siguiente</button>
+          <button id="btn-siguiente" type="button" class=" bg-[var(--color-texto)] text-[var(--color-texto-inverso)] tracking-[2px] w-full py-4 px-6     transition duration-200 ease-in-out hover:scale-105">Siguiente</button>
         </form>
       </section>
 
@@ -99,20 +97,20 @@
           </form>
           <!-- Vista previa del pedido -->
           <h2>Resumen del Pedido</h2>
-          <div class="order-items">
+          <div class="order-items mb-2">
             <div class="item">
               <span>Chaqueta Cuero Negro</span>
               <span>$499.900</span>
             </div>
             <!-- + más items -->
           </div>
-          <div class="totales">
+          <div class="totales mb-2">
             <p>Envío: <strong>$7.200</strong></p>
             <p>Total: <strong>$499.900</strong></p>
           </div>
         </section>
-        <p>Envío estándar hasta 3 días hábiles - $7.200.</p>
-        <button type="button" class="btn-siguiente">Siguiente</button>
+        <p class="mb-2">Envío estándar hasta 3 días hábiles - $7.200.</p>
+        <button id="btn-siguiente" type="button" class=" bg-[var(--color-texto)] text-[var(--color-texto-inverso)] tracking-[2px] w-full py-4 px-6     transition duration-200 ease-in-out hover:scale-105">Siguiente</button>
       </section>
 
       <!-- Paso 3: Método de Pago -->
@@ -164,25 +162,25 @@
 
           <p></p>
         </section>
-        <button type="button" class="btn-siguiente">Siguiente</button>
+        <button id="btn-siguiente" type="button" class=" bg-[var(--color-texto)] text-[var(--color-texto-inverso)] tracking-[2px] w-full py-4 px-6     transition duration-200 ease-in-out hover:scale-105">Siguiente</button>
       </section>
 
       <!-- Paso 4: Confirmación -->
       <section class="checkout-step" data-step="4">
         <h2>Confirmación</h2>
-        <p>¡Gracias por tu compra! Tu pedido está siendo procesado.</p>
-        <p id="estado-envio">📦 En preparación...</p>
+        <p class="mb-2">¡Gracias por tu compra! Tu pedido está siendo procesado.</p>
+        <p id="estado-envio" class="mb-2">📦 En preparación...</p>
       </section>
       <!-- Botón de pago -->
-      <button class="btn-finalizar">Finalizar compra</button>
+      <button id="btn-finalizar" class="bg-[var(--color-texto)] text-[var(--color-texto-inverso)] tracking-[2px] w-full py-4 px-6     transition duration-200 ease-in-out hover:scale-105">Finalizar compra</button>
 
       <!-- Políticas -->
       <section class="policies">
-        <p>
+        <p class="mb-1">
           🔁 <strong>Devoluciones fáciles:</strong> hasta 30 días.
           <a href="#">Ver política</a>
         </p>
-        <p>🔒 <strong>Pago 100% seguro con SSL</strong></p>
+        <p class="mb-1">🔒 <strong>Pago 100% seguro con SSL</strong></p>
       </section>
 
       <!-- FAQ -->
@@ -233,9 +231,12 @@
         </div>
       </section>
     </main>
-    <footer>
-      <p>2025 Chevignon Store. Todos los derechos reservados.</p>
-      <p>Hecho con ❤️ por el equipo de desarrollo.</p>
+    <footer id="footer">
+      <script>
+        fetch ("/partials/footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+      </script>
     </footer>
     <script src="/js/checkout.js" defer></script>
   </body>

@@ -15,11 +15,11 @@ function mostrarPaso(step) {
   });
 
   // Mostrar botón Finalizar solo en el paso 4
-  const btnFinalizar = document.querySelector('.btn-finalizar');
+  const btnFinalizar = document.querySelector('#btn-finalizar');
   btnFinalizar.style.display = (step === 4) ? 'block' : 'none';
 }
 
-const botonesSiguiente = document.querySelectorAll('.btn-siguiente');
+const botonesSiguiente = document.querySelectorAll('#btn-siguiente');
 botonesSiguiente.forEach(btn => {
   btn.addEventListener('click', () => {
     // Validación Paso 1
