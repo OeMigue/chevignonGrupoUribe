@@ -448,6 +448,17 @@ main {
     font-size: 24px;
 }
 
+#hero-section {
+  background-image: url('/assets/images/cuero.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+section:not(#hero-section) {
+  background-color: white;
+}
+
 /* Seccion Categorias */
 .seccion-categorias {
     padding: 2.5rem 1rem;
@@ -708,6 +719,7 @@ aside details {
     max-height: 100%;
     font-size: var(--fs-textoBotones);
   }
+  }
 
   .card-producto {
     width: 300px;
@@ -734,7 +746,7 @@ aside details {
     justify-content: center;
     gap: 30px;
   }
-}
+
 
 .card-producto button {
   background-color: var(--color-iconos);
@@ -850,7 +862,6 @@ aside details {
     margin-top: 0;
 }
 /* Envios */
-
 
 
 
